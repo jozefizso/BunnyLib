@@ -1,6 +1,9 @@
 # BunnyLib
 
+<img align="right" width="400" height="400" src="https://user-images.githubusercontent.com/287778/220604158-c19513ba-01b1-4417-b587-57974aedb672.png">
+
 > Sample project for using Google Test in Xcode.
+
 
 
 
