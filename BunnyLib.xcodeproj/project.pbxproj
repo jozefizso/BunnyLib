@@ -10,13 +10,34 @@
 		FE9459C929A61F4D00CB1FE8 /* BunnyLib.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FE9459C829A61F4D00CB1FE8 /* BunnyLib.hpp */; };
 		FE9459CB29A61F4D00CB1FE8 /* BunnyLibPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FE9459CA29A61F4D00CB1FE8 /* BunnyLibPriv.hpp */; };
 		FE9459CD29A61F4D00CB1FE8 /* BunnyLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE9459CC29A61F4D00CB1FE8 /* BunnyLib.cpp */; };
+		FE9459E629A627AD00CB1FE8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE9459E529A627AD00CB1FE8 /* main.cpp */; };
+		FE9459EA29A627B200CB1FE8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE9459DD29A6279600CB1FE8 /* main.cpp */; };
+		FE9459EC29A627CF00CB1FE8 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE9459EB29A627CF00CB1FE8 /* test.cpp */; };
+		FE9459F229A6288E00CB1FE8 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9459F029A6283800CB1FE8 /* libgtest_main.a */; };
+		FE9459F329A6288E00CB1FE8 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9459DA29A6259600CB1FE8 /* libgtest.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE9459ED29A6281500CB1FE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE9459BD29A61F4D00CB1FE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE9459D329A623E000CB1FE8;
+			remoteInfo = cmake;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FE9459C529A61F4D00CB1FE8 /* libBunnyLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libBunnyLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9459C829A61F4D00CB1FE8 /* BunnyLib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BunnyLib.hpp; sourceTree = "<group>"; };
 		FE9459CA29A61F4D00CB1FE8 /* BunnyLibPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BunnyLibPriv.hpp; sourceTree = "<group>"; };
 		FE9459CC29A61F4D00CB1FE8 /* BunnyLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BunnyLib.cpp; sourceTree = "<group>"; };
+		FE9459DA29A6259600CB1FE8 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = build/lib/libgtest.a; sourceTree = "<group>"; };
+		FE9459DD29A6279600CB1FE8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FE9459E329A627AD00CB1FE8 /* BunnyTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BunnyTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9459E529A627AD00CB1FE8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FE9459EB29A627CF00CB1FE8 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = test.cpp; path = Tests/test.cpp; sourceTree = SOURCE_ROOT; };
+		FE9459F029A6283800CB1FE8 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = build/lib/libgtest_main.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +48,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE9459E029A627AD00CB1FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9459F229A6288E00CB1FE8 /* libgtest_main.a in Frameworks */,
+				FE9459F329A6288E00CB1FE8 /* libgtest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -34,7 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				FE9459C729A61F4D00CB1FE8 /* BunnyLib */,
+				FE9459DC29A6276B00CB1FE8 /* Tests */,
+				FE9459E429A627AD00CB1FE8 /* BunnyTests */,
 				FE9459C629A61F4D00CB1FE8 /* Products */,
+				FE9459D929A6259600CB1FE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -42,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				FE9459C529A61F4D00CB1FE8 /* libBunnyLib.dylib */,
+				FE9459E329A627AD00CB1FE8 /* BunnyTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +88,32 @@
 				FE9459CC29A61F4D00CB1FE8 /* BunnyLib.cpp */,
 			);
 			path = BunnyLib;
+			sourceTree = "<group>";
+		};
+		FE9459D929A6259600CB1FE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE9459F029A6283800CB1FE8 /* libgtest_main.a */,
+				FE9459DA29A6259600CB1FE8 /* libgtest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE9459DC29A6276B00CB1FE8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FE9459DD29A6279600CB1FE8 /* main.cpp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		FE9459E429A627AD00CB1FE8 /* BunnyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE9459E529A627AD00CB1FE8 /* main.cpp */,
+				FE9459EB29A627CF00CB1FE8 /* test.cpp */,
+			);
+			path = BunnyTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,6 +129,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		FE9459D329A623E000CB1FE8 /* gtest */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--build build";
+			buildConfigurationList = FE9459D429A623E000CB1FE8 /* Build configuration list for PBXLegacyTarget "gtest" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/cmake;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = gtest;
+			passBuildSettingsInEnvironment = 1;
+			productName = cmake;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		FE9459C429A61F4D00CB1FE8 /* BunnyLib */ = {
@@ -88,6 +165,23 @@
 			productReference = FE9459C529A61F4D00CB1FE8 /* libBunnyLib.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		FE9459E229A627AD00CB1FE8 /* BunnyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE9459E729A627AD00CB1FE8 /* Build configuration list for PBXNativeTarget "BunnyTests" */;
+			buildPhases = (
+				FE9459DF29A627AD00CB1FE8 /* Sources */,
+				FE9459E029A627AD00CB1FE8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE9459EE29A6281500CB1FE8 /* PBXTargetDependency */,
+			);
+			name = BunnyTests;
+			productName = BunnyTests;
+			productReference = FE9459E329A627AD00CB1FE8 /* BunnyTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +192,12 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					FE9459C429A61F4D00CB1FE8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FE9459D329A623E000CB1FE8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FE9459E229A627AD00CB1FE8 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -115,7 +215,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				FE9459D329A623E000CB1FE8 /* gtest */,
 				FE9459C429A61F4D00CB1FE8 /* BunnyLib */,
+				FE9459E229A627AD00CB1FE8 /* BunnyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -129,7 +231,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE9459DF29A627AD00CB1FE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9459EA29A627B200CB1FE8 /* main.cpp in Sources */,
+				FE9459E629A627AD00CB1FE8 /* main.cpp in Sources */,
+				FE9459EC29A627CF00CB1FE8 /* test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE9459EE29A6281500CB1FE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE9459D329A623E000CB1FE8 /* gtest */;
+			targetProxy = FE9459ED29A6281500CB1FE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FE9459CE29A61F4D00CB1FE8 /* Debug */ = {
@@ -252,6 +372,11 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -268,8 +393,70 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FE9459D529A623E000CB1FE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 44X73QA89R;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE9459D629A623E000CB1FE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 44X73QA89R;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FE9459E829A627AD00CB1FE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44X73QA89R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/build/_deps/googletest-src/googletest/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE9459E929A627AD00CB1FE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44X73QA89R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/build/_deps/googletest-src/googletest/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -290,6 +477,24 @@
 			buildConfigurations = (
 				FE9459D129A61F4D00CB1FE8 /* Debug */,
 				FE9459D229A61F4D00CB1FE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE9459D429A623E000CB1FE8 /* Build configuration list for PBXLegacyTarget "gtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9459D529A623E000CB1FE8 /* Debug */,
+				FE9459D629A623E000CB1FE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE9459E729A627AD00CB1FE8 /* Build configuration list for PBXNativeTarget "BunnyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9459E829A627AD00CB1FE8 /* Debug */,
+				FE9459E929A627AD00CB1FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
